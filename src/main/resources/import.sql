@@ -1,8 +1,5 @@
 -- ==== Usuarios ====
-INSERT INTO usuarios (id_usuario, numero_celular, num_documento, apellido, correo_electronico, nombre, contrasena, tipo_documento, tipo_usuario) VALUES (1,'987654321','12345678','Enciso','henry.enciso@correo.com','Henry','Admin123','DNI','ADMINISTRADOR');
-INSERT INTO usuarios (id_usuario, numero_celular, num_documento, apellido, correo_electronico, nombre, contrasena, tipo_documento, tipo_usuario) VALUES (2,'987654322','87654321','Llontop','claudio.llontop@correo.com','Claudio','Admin123','DNI','ADMINISTRADOR');
-INSERT INTO usuarios (id_usuario, numero_celular, num_documento, apellido, correo_electronico, nombre, contrasena, tipo_documento, tipo_usuario) VALUES (3,'987654323','11223344','Garcia','belkin.garcia@correo.com','Belkin','Admin123','DNI','ADMINISTRADOR');
-INSERT INTO usuarios (id_usuario, numero_celular, num_documento, apellido, correo_electronico, nombre, contrasena, tipo_documento, tipo_usuario) VALUES (4,'987654324','44332211','Ramirez','sebastian.ramirez@correo.com','Sebastian','Admin123','DNI','ADMINISTRADOR');
+INSERT INTO usuarios (id_usuario, numero_celular, num_documento, apellido, correo_electronico, nombre, contrasena, tipo_documento, tipo_usuario) VALUES (1,'999999999','77777777','Admin','admin@correo.com','Admin','$2a$10$XWcKMwUDe3mLwkRIH6YnWO2mgUQPSFZodzxO5zIxtZv7EJbsIni9m','DNI','ADMINISTRADOR');
 
 -- ==== Administradores ====
 INSERT INTO administradores (id_administrador, id_usuario) VALUES (1,1);
