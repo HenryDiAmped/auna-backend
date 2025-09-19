@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.auna.citas.interfaces.services.IUsuarioService;
@@ -14,6 +15,9 @@ import com.auna.citas.repositorys.UsuarioRepository;
 public class UsuarioService implements IUsuarioService{
 	@Autowired
 	private UsuarioRepository data;
+	
+	@Autowired
+	private PasswordEncoder passwordEncoder;
 	
 	@Override
 	public List<Usuario> listar() {
@@ -28,7 +32,13 @@ public class UsuarioService implements IUsuarioService{
 
 	@Override
 	public Usuario guardar(Usuario u) {
-		return data.save(u);
+		String usuarioContrasena = u.getContrasena();
+		String contrasenaEncode = passwordEncoder.encode(usuarioContrasena);
+		
+		Usuario UsuarioGuardar = u;
+		UsuarioGuardar.setContrasena(contrasenaEncode);
+		
+		return data.save(UsuarioGuardar);
 	}
 
 	@Override
