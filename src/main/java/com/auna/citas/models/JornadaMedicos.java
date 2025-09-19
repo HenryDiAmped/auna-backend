@@ -13,7 +13,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name="Jornada_medicos")
-public class JornadaMedicos {
+public class JornadaMedicos extends Auditable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id_jornada_medicos")
