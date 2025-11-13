@@ -1,11 +1,12 @@
 -- ==== Usuarios ====
 INSERT INTO usuarios (id_usuario, numero_celular, num_documento, apellido, correo_electronico, nombre, contrasena, tipo_documento, tipo_usuario) VALUES (1,'999999999','77777777','Admin','admin@correo.com','Admin','$2a$10$XWcKMwUDe3mLwkRIH6YnWO2mgUQPSFZodzxO5zIxtZv7EJbsIni9m','DNI','ADMINISTRADOR');
+INSERT INTO usuarios (id_usuario, numero_celular, num_documento, apellido, correo_electronico, nombre, contrasena, tipo_documento, tipo_usuario) VALUES (2,'888888888','66666666','Paciente','paciente@correo.com','Paciente','$2a$10$hb9sjqd4uiD9TP7u7U37c.PCMHKfRu.LPsX2wcfUBBvxxJJuukbE2','DNI','PACIENTE');
 
 -- ==== Administradores ====
 INSERT INTO administradores (id_administrador, id_usuario) VALUES (1,1);
-INSERT INTO administradores (id_administrador, id_usuario) VALUES (2,2);
-INSERT INTO administradores (id_administrador, id_usuario) VALUES (3,3);
-INSERT INTO administradores (id_administrador, id_usuario) VALUES (4,4);
+
+-- ==== Pacientes ====
+INSERT INTO pacientes (id_paciente, id_usuario) VALUES (1,2);
 
 -- ==== Especialidades ====
 INSERT INTO especialidades (id_especialidad, descripcion, nombre_especialidad) VALUES (1,'Especialidad médica enfocada en el corazón y sistema circulatorio.','Cardiología'),(2,'Especialidad dedicada al diagnóstico y tratamiento de enfermedades de la piel.','Dermatología'),(3,'Se encarga del sistema nervioso y sus trastornos.','Neurología'),(4,'Especialidad médica centrada en la salud de los niños.','Pediatría'),(5,'Se enfoca en el sistema reproductor femenino.','Ginecología'),(6,'Especialidad que trata las condiciones del sistema musculoesquelético.','Ortopedia'),(7,'Diagnóstico y tratamiento de enfermedades oculares.','Oftalmología'),(8,'Se ocupa de los trastornos mentales y emocionales.','Psiquiatría'),(9,'Diagnóstico y tratamiento del cáncer.','Oncología'),(10,'Estudio de las hormonas y las glándulas endocrinas.','Endocrinología');
